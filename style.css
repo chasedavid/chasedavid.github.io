@@ -1,3 +1,30 @@
-img.center {
-    text-align:center;
+
+body {
+    background-color: #01C7D3;
 }
+
+.navbar-default{
+    background-color: #F0B02F;
+}
+
+.jumbotron{
+    background-color: #F0B02F;
+
+}
+
+.table{
+    background-color: #FFF6E2;
+}
+
+.dropdown{
+    background-color: #FFF6E2;
+}
+
+.dropdown-menu{
+    background-color: #FFF6E2;
+}
+
+.panel-body{
+    background-color: #FFF6E2
+}
+

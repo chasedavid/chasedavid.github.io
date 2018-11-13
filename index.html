@@ -1,38 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Chase Farnsworth - Bio</title>
-    <link rel='stylesheet' href="style.scc">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">  
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <title>Web-Challenge</title>
 </head>
+
 <body>
-    <div>
-        <img src="https://avatars3.githubusercontent.com/u/22465144?s=460&v=4" width="300px" height="auto" class='center'>
+    
+
+
+        <div class="jumbotron text-center">
+                <h1>Data is Beautiful</h1>
+                <p>A Weather Analysis</p> 
+        </div>
+
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visuals <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                        <li><a href="vis.html">Lat vs Temp</a></li>
+                                        <li><a href="vis1.html">Lat vs Humidity</a></li>
+                                        <li><a href="vis2.html">Lat vs Cloudiness</a></li>  
+                                        <li><a href="vis3.html">Lat vs Windspeed</a></li>
+                                    </ul>
+                              </li>
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="vis.html">Visualization</a></li>
+                                <li><a href="comp.html">Comparison</a></li>
+                                <li><a href="data.html">The Data</a></li>  
+                            </ul>
+                      </li>
+                    </ul>
+                  </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="container-fluid col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">A Quick Explination</h3>
+                </div>
+                <div class="panel-body">
+                    It is common knowledge that temperature increases as an individual travels closer to the Equator.
+                    How would one go about proving this? Hopefully by delving into over 500 data points, we might be able to 
+                    illustrate this fact.
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Data Collection</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>Data was collected my making requests from an API, specifically 
+                        <a href="https://openweathermap.org/api">Open Weather Map</a>.</p>
+                        <p>Using random numbers to obtain potential latitudes and longitudes, a library called 
+                        <a href='https://github.com/wingchen/citipy/blob/master/README.md'>CityPy</a>
+                        was used to obtain the nearest city. The city name was used in the openweathermap API to
+                        obtain the weather data for at least 500 cities worldwide.
+                        Data was stored as .csv file and analyzed using pandas, illustrated using matplotlib.</p>
+                    </div>
+                </div>
+            </div>
+
+        <div class="container-fluid col-md-4">
+                <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-6 col-lg-3">
+                                    <a href="vis.html" class="thumbnail">
+                                        <img src="./img/Lat-vs-Temp.png">
+                                        <p>Temp</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-lg-3">
+                                        <a href="vis1.html" class="thumbnail">
+                                            <img src="./img/Lat-vs-Humid.png">
+                                            <p>Humidity</p>
+                                        </a>
+                                </div>
+                                <div class="col-xs-6 col-lg-3">
+                                        <a href="vis2.html" class="thumbnail">
+                                            <img src="./img/Lat-vs-Cloud.png">
+                                            <p>Clouds</p>
+                                        </a>
+                                </div>
+                                <div class="col-xs-6 col-lg-3">
+                                        <a href="vis3.html" class="thumbnail">
+                                            <img src="./img/Lat-vs-WindSpeed.png">
+                                            <p>Wind</p>
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    <div class="row">    
+        <div class="panel panel-default">
+        
+                <div class="panel-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <h3><a href="vis.html">Visualization</a></h3>
+                    <ul>
+                        <li><a href="vis.html">Latitude vs Temperature</a></li>
+                        <li><a href="vis1.html">Latitude vs Humidity</a></li>
+                        <li><a href="vis2.html">Latitude vs Cloudiness</a></li>
+                        <li><a href="vis3.html">Latitude vs Windspeed</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <h3><a href="comp.html">The Comparison</a></h3>
+                    <p>For a side by side comparison.</p>
+                  </div>
+                  <div class="col-sm-4">
+                    <h3><a href="data.html">The Data</a></h3>       
+                    <p>For the data saved</p>
+                  </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <h1>
-        Chase Farnsworth
-    </h1>
-    <h3>
-        My Bio
-    </h3>
-    <p>
-        My life of excitement begins (like most other people) when I was born. Born in the swanky city of San Diego.
-        Unfortunatley, I like most others would only know this town as a vacation destination. Instead, I grew into
-        a man in the Suburbs of Phoenix Arizona. A strange hodge-podge of farm land and neighborhoods. As time progressed
-        the farms were consumed in housing to fuel the fast growing area. It was here I learned to love the outdoors,
-        I learned I loved to travel, and learned that I loved math.
-    </p>
-    <p>
-        I learned I loved math my senior year of high school. The combination of statistics and calculus brought purpose 
-        to the many algebra rules the teachers had been telling me to just memorize and resite. The applications and insite
-        fueled a love - a love that would take me to Arizona State University to study applied mathematics.
-    </p>
-    <p>I am currently studying Data Analytics at the University of Arizona. Feel free to check out my:
-        <ul>
-            <li><a href='http://github.com/chasedavid'>github</a></p></li>
-            <li><a href='https://www.linkedin.com/in/chase-farnsworth-25272b150/'>linkedin</a></li>
-        </ul>
+
+
+
 </body>
 </html>
